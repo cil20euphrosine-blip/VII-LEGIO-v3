@@ -1,0 +1,30 @@
+body{margin:0;font-family:system-ui,Roboto,sans-serif;background:#f4efe4;color:#1f2a36;padding-bottom:70px}
+header{padding:10px 14px;border-bottom:1px solid #e2d9c3;background:#fff}
+h1{margin:0;font-size:17px;color:#1f3d4a} .ver{font-size:10px;background:#efe6cf;color:#9a7a2e;padding:2px 6px;border-radius:4px}
+.sous{font-size:12px;color:#6b6b6b}
+main{padding:10px 12px}
+.carte{background:#fffdf8;border:1px solid #e2d9c3;border-radius:12px;padding:10px;margin-bottom:10px}
+.carte h2{margin:0 0 8px;font-size:12px;color:#9a7a2e;letter-spacing:.06em;text-transform:uppercase}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
+.grille button,.zones button,.carte button{min-height:40px;background:#fff;border:1px solid #b8a886;border-radius:8px;color:#1f3d4a;font:inherit;cursor:pointer;margin:2px 0}
+.grille .centre{display:flex;align-items:center;justify-content:center;font-size:11px;color:#9a7a2e}
+.ligne{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #efe9d8;font-size:14px}
+.segments{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.seg{border:1px solid #1f3d4a;border-radius:14px;padding:3px 9px;font-size:12px;cursor:pointer}
+.principal{background:#1f3d4a!important;color:#fff!important;width:100%}
+.carte button:disabled{opacity:.4}
+.verrou{border-color:#b3263e}
+.zones{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px}
+#fil{position:fixed;left:0;right:0;bottom:0;max-width:720px;margin:0 auto;background:#fff;border-top:1px solid #e2d9c3;border-radius:18px 18px 0 0;box-shadow:0 -4px 14px rgba(0,0,0,.08);height:64px;overflow:hidden;transition:height .25s}
+#fil.mi{height:45vh}
+#fil .poignee{width:34px;height:4px;background:#cfc6b0;border-radius:2px;margin:6px auto 4px}
+#fil .entete{padding:0 14px 6px;font-size:13px;font-weight:700;color:#1f3d4a;cursor:pointer}
+#fil-badge{background:#9a7a2e;color:#fff;border-radius:10px;padding:1px 7px;font-size:11px}
+#fil .corps{padding:0 12px 12px;overflow-y:auto;height:calc(100% - 40px)}
+#fil.repos .corps .msg:not(:first-child){display:none}
+.msg{border-radius:10px;padding:6px 9px;margin:6px 0;font-size:12px}
+.msg.sc{background:#d6ebf5;border-left:4px solid #1f6f8b}
+.msg.uc{background:#f7e3a1;border-left:4px solid #9a7a2e;margin-left:24px}
+
+.ops{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+#mission-resultats p{font-size:13px;margin:8px 0 0;color:#1f3d4a}

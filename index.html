@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>VII Legio Solo — affichage du moteur</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>VII LEGIO SOLO <span class="ver">moteur v2</span></h1>
+  <div class="sous">FROMBOLA · Décurion · <span id="pts">0 pts</span></div>
+</header>
+
+<main>
+  <section class="carte">
+    <h2>Route</h2>
+    <div class="grille" id="boutons-dir"></div>
+    <div class="ligne"><span>Distance</span>
+      <span><button onclick="window.changerDistance(-1)">−</button> <b id="distance">1</b> <button onclick="window.changerDistance(1)">+</button></span></div>
+    <div class="segments" id="segments"></div>
+    <div class="ligne"><span>Total</span><b id="total"></b></div>
+    <button class="principal" id="annoncer" onclick="window.annoncerRoute()" disabled>Annoncer la route</button>
+    <button id="atterrir" onclick="window.demanderAtterrissage()" disabled>Route d’atterrissage</button>
+  </section>
+
+  <section class="carte" id="boucliers" style="display:none">
+    <h2>Boucliers (début de tour)</h2>
+    <button onclick="window.choisirBoucliers(true)">Activer</button>
+    <button onclick="window.choisirBoucliers(false)">Éteindre</button>
+  </section>
+
+  <section class="carte verrou" id="verrou" style="display:none">
+    <h2>Atterrissage</h2>
+    <p>Zone et risque doivent être déterminés avant toute autre action.</p>
+    <div class="zones" id="zones"></div>
+  </section>
+
+  <section class="carte" id="mission" style="display:none">
+    <h2>Mission</h2>
+    <div class="ops">
+      <button onclick="window.mission('elim')">Élimination</button>
+      <button onclick="window.mission('capture')">Capture</button>
+      <button onclick="window.mission('alliance')">Alliance</button>
+      <button onclick="window.mission('intim')">Intimidation</button>
+      <button onclick="window.mission('commerce')">Commerce</button>
+      <button onclick="window.mission('tot')">Tot 100 %</button>
+    </div>
+    <div id="mission-resultats"></div>
+  </section>
+</main>
+
+<div id="fil" class="repos">
+  <div class="poignee" onclick="window.basculerFil()"></div>
+  <div class="entete" onclick="window.basculerFil()">Fil d’échanges <span id="fil-badge"></span></div>
+  <div class="corps" id="fil-corps"></div>
+</div>
+
+<script type="module" src="affichage.js"></script>
+</body>
+</html>
